@@ -18,11 +18,13 @@
       background-size: 800% 800%;
       animation: bgGlow 12s ease infinite;
     }
+
     @keyframes bgGlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
     .particle {
       position: absolute;
       border-radius: 50%;
@@ -209,31 +211,10 @@
       to { transform: translateY(-10vh) translateX(30px); }
     }
 
-    /* Polaroid */
-    .polaroid {
-      width: 220px;
-      padding: 10px 10px 20px 10px;
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      margin: 20px auto;
-      text-align: center;
-      font-family: 'Courier New', monospace;
-      border-radius: 5px;
-      transform: rotate(-2deg);
-      transition: transform 0.3s;
-    }
-    .polaroid:hover { transform: rotate(0deg) scale(1.05); }
-    .polaroid img {
-      width: 100%;
-      border-radius: 3px;
-    }
-    .polaroid p {
-      margin-top: 8px;
-      font-size: 13px;
-    }
-
     /* Appreciation buttons */
-    .appreciate-btns { margin-top: 15px; }
+    .appreciate-btns {
+      margin-top: 15px;
+    }
     .appreciate-btns button {
       background: #ff4d88;
       border: none;
@@ -244,7 +225,9 @@
       cursor: pointer;
       font-size: 14px;
     }
-    .appreciate-btns button:hover { background: #ff1a66; }
+    .appreciate-btns button:hover {
+      background: #ff1a66;
+    }
 
     /* Kisses screen */
     .kisses {
@@ -387,7 +370,7 @@
       setTimeout(() => { envelope.classList.add('open'); }, 1000);
 
       // Typewriter effect
-      let msg = "Happy Birthday, Baby! 🎉❤️ I’m so blessed we first talked on Jan 20, 2025. You are my everything, my forever, my only love. I love you endlessly and I can’t wait to spend more birthdays with you💕";
+      let msg = "Happy birthday babyy!! My dezuriyy, My Everything, Asawa khoee ugh daddy HAHAHAHAH, So it's your day babyyy Enjoyy it wag muna mag paka stress ha? So ito nga baby eto muna gift ko sayo wala e Ldr, ito lang muna ang kaya, akala natin mkakapag date tayo. Huhu sad na akes, ano ba hindi ko alam sasabihin kooo de joke lang. Babyyy kahit mag kalayo man tayo lagi mong i remember na mahal na mahal kitaaaa, ILOVEYOUUUUU SO MUCH BABYY, soon mag ccelebrate na tayo together mag ddate tayo  kung saan mo gusto tas after nun diretso tayo hotel mag papalamig sa aircon charingggg, So ang wish ko sa baby ko na pinaka sweet and caring pretty, gorgeous sa buong universe ay sana matupad lahat ng dream mo sa sarili mo and to your familyy. Always take care babyyyy, ILOVEYOUUUUU SO MUCH MUCH I'm always here baby dadamayan kita sa lahat mapa tumatae ka man hehe, Babawi ako pag nag kita tayooo bigyan kita ng madaming kissesss and a big hugggg. Sana magustuhan mo gift ko babyyy Mwah mwah mwah. Sorry hindi ako marunong pag dating sa ganito na pag gawa ng letter babbyyy, One last question babyy sagutin mo sa baba, Do you appreciate my gift baby??";
       let i = 0;
       messageDiv.innerHTML = '<div class="scroll-indicator">Scroll ↓</div>';
       function typeWriter(){
@@ -396,29 +379,12 @@
           i++;
           setTimeout(typeWriter, 60);
         } else {
-          // After finished typing, add polaroid photos
-          const photo1 = document.createElement("div");
-          photo1.classList.add("polaroid");
-          photo1.innerHTML = `
-            <img src="https://drive.google.com/uc?export=view&id=1guCHdKNHxDWIWpLuZ9sC1w9PLl950SVw" alt="Memory 1">
-            <p>Our Sweet Memory</p>
-          `;
-          messageDiv.appendChild(photo1);
-
-          const photo2 = document.createElement("div");
-          photo2.classList.add("polaroid");
-          photo2.innerHTML = `
-            <img src="https://drive.google.com/uc?export=view&id=1VAX21JEKmEvWz9pHp-O_9oo2j8paw0zb" alt="Memory 2">
-            <p>Another Beautiful Day</p>
-          `;
-          messageDiv.appendChild(photo2);
-
-          // Then show appreciation buttons
+          // After finished typing, show buttons
           const btns = document.createElement("div");
           btns.classList.add("appreciate-btns");
           btns.innerHTML = `
             <button id="yesBtn">Yes I appreciate it 💖</button>
-            <button id="noBtn">No 😅</button>
+            <button id="noBtn">No </button>
           `;
           messageDiv.appendChild(btns);
 
